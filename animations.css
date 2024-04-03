@@ -1,6 +1,6 @@
 .content {
   animation: movetoright 1s ease-in;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
   animation-direction: reverse;
   animation-fill-mode: backwards;
   /* animation-iteration-count: infinite; */
@@ -16,7 +16,7 @@
   }
 }
 .image svg {
-  animation: movetoleft 1s ease-out;
+  animation: movetoleft 1s ease-in;
   animation-delay: 0.5s;
   animation-direction: reverse;
   animation-fill-mode: backwards;
@@ -30,3 +30,18 @@
     transform: translateX(1000px);
   }
 }
+.image img {
+  animation: movetoup 1s ease-in;
+  animation-delay: 1.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+@keyframes movetoup {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1000px);
+  }
+}
+
