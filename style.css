@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Public Sans", sans-serif;
-  /* font-weight:; */
+
   box-sizing: border-box;
 }
 body {
@@ -13,13 +13,10 @@ body {
   position: sticky;
   background-color: white;
   top: 0;
-  /* padding: 2.4rem; */
   height: 100px;
   font-size: 1rem;
-  /* font-weight: bold; */
   display: flex;
   justify-content: space-evenly;
-  /* border: 4px solid black; */
   column-gap: 3rem;
   list-style: none;
   align-items: center;
@@ -33,7 +30,6 @@ body {
   justify-content: space-evenly;
 }
 .fonts div {
-  /* padding: 10px; */
   height: 100px;
   display: flex;
   justify-content: center;
@@ -43,13 +39,10 @@ body {
   border-bottom: 5px solid hsl(136, 65%, 51%);
 }
 a {
-  /* position: fixed; */
   color: hsl(233, 8%, 62%);
-  /* height:100% ; */
   text-decoration: none;
 }
 .button button {
-  /* font-family: ; */
   border-radius: 6rem;
   width: 10rem;
   height: 3rem;
@@ -79,7 +72,6 @@ a {
   position: relative;
   top: -262px;
   left: -29px;
-  /* overflow: hidden; */
 }
 .image img {
   position: relative;
@@ -126,33 +118,28 @@ a {
   box-sizing: border-box;
   position: relative;
   top: 105px;
-  /* left: 205px; */
 }
 .cards {
   position: relative;
   top: 200px;
-  /* left: 70px; */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  /* left: 205px; */
-  /* gap: 4rem;
-  padding-right: 250px; */
+}
+.box {
+  padding: 1rem;
 }
 .box span {
   font-size: larger;
   color: black;
 }
 .bg3 {
-  /* position: relative; */
-  /* top: -110px; */
   height: 100vh;
   background-color: hsl(0, 0%, 98%);
 }
 .container3 span {
   position: relative;
   top: 60px;
-  /* left: 205px; */
   font-size: 2.3em;
   color: black;
 }
@@ -171,10 +158,7 @@ a {
   grid-template-columns: repeat(4, 1fr);
 }
 .card {
-  /* display: flex; */
   border-radius: 10px;
-  /* height: 70%; */
-  /* object-fit: cover; */
   justify-content: center;
   align-self: normal;
   overflow: hidden;
@@ -224,12 +208,10 @@ a {
 }
 
 .logosvg {
-  /* background-image: url("logo.svg"); */
   height: 20px;
   width: 139px;
   position: relative;
   top: 30px;
-  /* background-color: azure; */
 }
 path#logoicon {
   background: none;
