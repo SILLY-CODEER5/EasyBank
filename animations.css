@@ -1,0 +1,32 @@
+.content {
+  animation: movetoright 1s ease-in;
+  animation-delay: 2s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+  /* animation-iteration-count: infinite; */
+}
+
+@keyframes movetoright {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-700px);
+  }
+}
+.image svg {
+  animation: movetoleft 1s ease-out;
+  animation-delay: 0.5s;
+  animation-direction: reverse;
+  animation-fill-mode: backwards;
+}
+
+@keyframes movetoleft {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
+}
