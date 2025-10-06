@@ -171,6 +171,27 @@ img {
     background-color: var(--very-light-gray);
     text-align: center;
     padding-top: 80px; /* Offset for fixed header */
+    background-image: url('https://raw.githubusercontent.com/SILLY-CODEER5/EasyBank/main/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.hero__image-container {
+    /* The background image is no longer here */
+    min-height: 300px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero__bg-image {
+    margin-top: -70px; /* Adjust vertical position */
+    width: 90%;
+}
+
+.hero__text-container {
+    padding: 2rem 0 4rem; /* Added bottom padding */
 }
 
 .hero__image-container {
@@ -425,30 +446,37 @@ img {
     /* Hero Section */
     .hero {
         overflow: hidden;
+        background-image: url('https://raw.githubusercontent.com/SILLY-CODEER5/EasyBank/main/bg-intro-desktop.svg');
+        background-position: 80% 80%;
+        background-size: 120%;
     }
     .hero__container {
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
         text-align: left;
+        position: relative;
+        height: 650px; /* Set a fixed height for positioning context */
         padding-top: 0;
         padding-bottom: 0;
     }
     .hero__image-container {
-        flex: 1;
-        background-image: url('https://raw.githubusercontent.com/SILLY-CODEER5/EasyBank/main/bg-intro-desktop.svg');
-        background-position: left;
-        background-size: 150%;
+        position: absolute;
+        top: 0;
+        right: -10%; /* Move container off-screen */
+        width: 60%;
+        height: 100%;
         min-height: 0;
     }
     .hero__bg-image {
-        margin: 0;
+        position: absolute;
+        top: -40px; /* Adjust vertical position */
+        right: 0;
         width: auto;
-        transform: translate(20%, -10%);
         max-width: none;
+        margin-top: 0;
     }
     .hero__text-container {
-        flex: 1;
+        flex-basis: 40%; /* Text takes up 40% of the container */
         padding: 0;
     }
 
@@ -474,3 +502,4 @@ img {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
