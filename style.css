@@ -128,9 +128,8 @@ img {
 
 /* Mobile Navigation Panel */
 .header__nav {
-    display: none; /* Hidden by default */
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 0;
     right: 0;
     width: 90%;
@@ -138,7 +137,11 @@ img {
     background-color: var(--white);
     border-radius: 5px;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .header__links li a {
@@ -149,7 +152,9 @@ img {
 
 /* Logic to show/hide menu */
 .header__menu-toggle:checked ~ .header__nav {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .header__menu-toggle:checked ~ .header__menu-button .header__hamburger {
@@ -171,27 +176,6 @@ img {
     background-color: var(--very-light-gray);
     text-align: center;
     padding-top: 80px; /* Offset for fixed header */
-    background-image: url('https://raw.githubusercontent.com/SILLY-CODEER5/EasyBank/main/bg-intro-mobile.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-}
-
-.hero__image-container {
-    /* The background image is no longer here */
-    min-height: 300px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.hero__bg-image {
-    margin-top: -70px; /* Adjust vertical position */
-    width: 90%;
-}
-
-.hero__text-container {
-    padding: 2rem 0 4rem; /* Added bottom padding */
 }
 
 .hero__image-container {
@@ -208,7 +192,7 @@ img {
 }
 
 .hero__text-container {
-    padding: 2rem 0;
+    padding: 2rem 0 4rem;
 }
 
 /* ------------------- */
@@ -400,7 +384,6 @@ img {
     .footer__right {
         align-items: flex-end;
     }
-
 }
 
 /* Desktop Styles */
@@ -416,6 +399,10 @@ img {
         width: auto;
         background: none;
         padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
     }
     .header__links {
         display: flex;
@@ -428,7 +415,7 @@ img {
     .header__links li a::after {
         content: '';
         position: absolute;
-        bottom: -20px;
+        bottom: -30px;
         left: 0;
         width: 100%;
         height: 4px;
@@ -446,9 +433,11 @@ img {
     /* Hero Section */
     .hero {
         overflow: hidden;
+        background-color: var(--very-light-gray);
         background-image: url('https://raw.githubusercontent.com/SILLY-CODEER5/EasyBank/main/bg-intro-desktop.svg');
-        background-position: 80% 80%;
-        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: left 40vw bottom 45%;
+        background-size: auto;
     }
     .hero__container {
         display: flex;
@@ -461,22 +450,22 @@ img {
     }
     .hero__image-container {
         position: absolute;
-        top: 0;
-        right: -10%; /* Move container off-screen */
-        width: 60%;
-        height: 100%;
+        top: -40px;
+        right: -180px; /* Position using pixels for more control */
+        width: 750px; /* Use fixed width for the image container */
+        height: 900px;
         min-height: 0;
+        background-image: none;
     }
     .hero__bg-image {
-        position: absolute;
-        top: -40px; /* Adjust vertical position */
-        right: 0;
-        width: auto;
-        max-width: none;
-        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Use contain to ensure the whole image is visible */
+        object-position: center;
+        margin: 0;
     }
     .hero__text-container {
-        flex-basis: 40%; /* Text takes up 40% of the container */
+        flex-basis: 45%; /* Give text a bit more space */
         padding: 0;
     }
 
